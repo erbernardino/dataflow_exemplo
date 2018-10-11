@@ -1,0 +1,13 @@
+#!/bin/sh
+mvn compile exec:java \
+  -Dexec.mainClass=me.emersonrocco.exemplos.EtlEC \
+  -Dexec.args="--project=testecloudgdgabcteste \
+    --loadingBucketURL=gs://dataflow_lpa_sp_2/temp \
+    --stagingLocation=gs://dataflow_lpa_sp_2/staging \
+    --runner=BlockingDataflowPipelineRunner \
+    --numWorkers=2 \
+    --maxNumWorkers=10 \
+    --bigQueryTablename=testecloudgdgabcteste:score.ec\
+    --diskSizeGb=25 \
+    --workerMachineType=n1-standard-1"
+

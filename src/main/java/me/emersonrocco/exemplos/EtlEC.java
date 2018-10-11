@@ -7,8 +7,7 @@ import com.google.cloud.dataflow.sdk.io.BigQueryIO;
 import com.google.cloud.dataflow.sdk.options.PipelineOptionsFactory;
 import com.google.cloud.dataflow.sdk.values.KV;
 import com.google.cloud.dataflow.sdk.values.PCollection;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+
 
     /**
      * This is a pipeline that denormalizes exported data from the dataset to
@@ -32,7 +31,7 @@ import org.slf4j.LoggerFactory;
      * --workerMachineType=n1-standard-1"
      */
     public class EtlEC {
-        private static final Logger logger = LoggerFactory.getLogger(EtlEC.class);
+
 
         public static void main(String[] args) {
             PipelineOptionsFactory.register(Options.class);
